@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Open Sans", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
+.background-shapes .ecclipse-10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.background-shapes .ecclipse-9 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.background-shapes .ecclipse-11 {
+  position: absolute;
+  top: 40rem;
+  left: 0;
+  z-index: -1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 16rem;
+}
+nav .logo img {
+  height: 8rem;
+}
+nav .navigation-menus {
+  display: flex;
+}
+nav .navigation-menus li {
+  list-style: none;
+}
+nav .navigation-menus li a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+
+.blog-heading {
+  display: block;
+  text-align: center;
+  font-weight: 800;
+  font-size: 4.8rem;
+}
+.blog {
+  padding:6rem 16rem;
+}
+.blog .blog-title {
+  font-size: 5rem;
+  display: block;
+}
+.blog span {
+  font-size: 2rem;
+  color: grey;
+}
+.blog span svg {
+  height: 2rem;
+  color: grey;
+}
+.blog-content{
+    display: flex;
+    padding:0rem 16rem 6rem 16rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.blog-content div{
+    width: 50%;
+    font-size: 1.8rem;
+    color:rgba(0, 0, 0, 1);
+    line-height:2.45rem;
+
+}
+.more-content{
+    font-size: 1.8rem;
+    padding:4rem 16rem;
+    line-height:2.45rem;
+    margin-bottom: 5rem;
+}
+/* .blo */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  background-color: rgba(5, 29, 51, 1);
+  color: white;
+}
+footer .content {
+  font-size: 1.8rem;
+  width: 31.3rem;
+  line-height: 2.8rem;
+  /* word-spacing: 1rem; */
+}
+footer .content hr {
+  margin: 2rem 0;
+  height: 0.3rem;
+  border: none;
+  background-color: white;
+}
+footer .quick-links {
+  list-style: none;
+  font-size: 2.5rem;
+  /* font-weight: 600; */
+}
+footer .quick-links li {
+  margin: 1rem;
+}
+.social-media-links {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+.social-media-links img {
+  height: 8.6rem;
+  border-radius: 10rem;
+  margin: 2rem;
+}
+.last-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem 4rem 4rem;
+}

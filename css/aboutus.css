@@ -1,0 +1,246 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Open Sans", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
+.background-shapes .ecclipse-10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.background-shapes .ecclipse-9 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.background-shapes .ecclipse-11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.background-shapes .ecclipse-12 {
+  position: absolute;
+  top: 56rem;
+  right: 0;
+  z-index: -1;
+}
+.background-shapes .ecclipse-13 {
+  position: absolute;
+  top: 236rem;
+  right: 0rem;
+  z-index: -1;
+}
+.background-shapes .ecclipse-14 {
+  position: absolute;
+  top: 210rem;
+  left: 0;
+  z-index: -1;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 16rem;
+}
+nav .logo img {
+  height: 8rem;
+}
+nav .navigation-menus {
+  display: flex;
+}
+nav .navigation-menus li {
+  list-style: none;
+}
+nav .navigation-menus li a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+.about-us {
+  width: 100%;
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: 800;
+}
+.founder-div {
+  padding: 6rem 16rem;
+}
+.founder-div .image img {
+  height: 53.2rem;
+  width: 65.4rem;
+  /* display: none; */
+}
+.founder-div .name {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: rgba(5, 29, 51, 1);
+}
+.founder-div .founder {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(5, 29, 51, 1);
+}
+.founder-div .other-details {
+  font-size: 2rem;
+  color: rgba(5, 29, 51, 1);
+}
+.founder-div .container {
+  width: 65.7rem;
+  height: 39.8rem;
+  /* padding: 7rem 15rem  7rem 4rem; */
+  color: white;
+  position: absolute;
+  top: 36rem;
+  right: 10rem;
+  border: 1.6rem solid rgba(241, 99, 42, 1);
+}
+.founder-div .words-of-founder {
+  background-color: rgba(83, 175, 164, 1);
+  width: 50.7rem;
+  padding: 10rem 15rem 10rem 4rem;
+  color: white;
+  position: absolute;
+  top: 40rem;
+  right: 15rem;
+}
+.founder-div .words-of-founder span {
+  font-size: 4.5rem;
+  font-weight: 800;
+}
+.founder-div .words-of-founder p {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+.youtube-image {
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+}
+.youtube-image img {
+  width: 82.5rem;
+  height: 51.6rem;
+}
+.second-about-us {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* padding: 0 16rem; */
+  padding: 9rem 16rem;
+}
+.second-about-us p {
+  text-align: left;
+
+  font-size: 2rem;
+  font-weight: normal;
+  /* padding: 0 16rem; */
+  width: 100rem;
+  line-height: 5.2rem;
+}
+.people {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 2rem 16rem 16rem 16rem;
+  grid-row-gap: 14rem;
+}
+.people .people-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.people .people-card img {
+  /* height:35rem;
+    width: 35rem; */
+  border-radius: 40rem;
+  margin-bottom: 2rem;
+}
+.people .people-card span {
+  display: block;
+}
+.people .people-card .name {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.people .people-card .position {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.people .people-card .education {
+  font-size: 1.4rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  background-color: rgba(5, 29, 51, 1);
+  color: white;
+}
+footer .content {
+  font-size: 1.8rem;
+  width: 31.3rem;
+  line-height: 2.8rem;
+  /* word-spacing: 1rem; */
+}
+footer .content hr {
+  margin: 2rem 0;
+  height: 0.3rem;
+  border: none;
+  background-color: white;
+}
+footer .quick-links {
+  list-style: none;
+  font-size: 2.5rem;
+  /* font-weight: 600; */
+}
+footer .quick-links li {
+  margin: 1rem;
+}
+.social-media-links {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+.social-media-links img {
+  height: 8.6rem;
+  border-radius: 10rem;
+  margin: 2rem;
+}
+.last-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem 4rem 4rem;
+}
