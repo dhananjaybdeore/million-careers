@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: inherit;
   font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 html {
   font-size: 62.5%;
@@ -39,15 +40,73 @@ html {
 .background-shapes .ecclipse-11 {
   position: absolute;
   top: 92rem;
+  height: 60rem;
   left: 0;
   z-index: -1;
 }
-
+@media only screen and (max-width: 1290px) {
+  .ecclipse-10 {
+    height: 20vh;
+  }
+  .ecclipse-9 {
+    height: 60vh;
+  }
+  .ecclipse-11 {
+    height: 1000px;
+    width: 400px;
+  }
+  .ecclipse-12 {
+    position: absolute;
+    top: 2728.94px;
+    right: 0;
+    width: 393px;
+    height: 993px;
+    z-index: -1;
+  }
+  .ecclipse-14 {
+    width: 250px;
+    margin-top: 15rem;
+  }
+  .ecclipse-13 {
+    width: 100px;
+    margin-top: 40rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .ecclipse-10 {
+    height: 20vh;
+    width: 90vw;
+  }
+  .ecclipse-9 {
+    width: 70vw;
+  }
+  .ecclipse-11 {
+    width: 50vw;
+    margin-top: 50rem;
+  }
+  .ecclipse-12 {
+    position: absolute;
+    top: 2728.94px;
+    right: 0;
+    width: 393px;
+    height: 993px;
+    z-index: -1;
+  }
+  .ecclipse-14 {
+    width: 250px;
+    margin-top: 15rem;
+  }
+  .ecclipse-13 {
+    width: 100px;
+    margin-top: 40rem;
+    display: none;
+  }
+}
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 16rem;
+  padding: 4rem 20rem;
 }
 nav .logo img {
   height: 8rem;
@@ -64,11 +123,153 @@ nav .navigation-menus li a {
   font-size: 2rem;
   margin: 0 2rem;
 }
+@media only screen and (max-width: 780px) {
+  nav .navigation-menus {
+    display: none;
+  }
+  nav {
+    justify-content: flex-start;
+    padding: 2rem 3rem;
+  }
+}
+.nav-bar {
+  visibility: hidden;
+  width: 100%;
+  z-index: 20;
+}
+.nav-bar img {
+  height: 8rem;
+  width: 20rem;
+  margin: 1rem 4rem;
+  margin-top: -20rem;
+}
+#nav_checkbox {
+  display: none;
+}
+
+.ham__label {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 20;
+}
+.background {
+  display: none;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  width: 3.5rem;
+  height: 2px;
+  cursor: pointer;
+  opacity: 1;
+}
+.hamburger::before {
+  content: "";
+  background-color: black;
+  width: 3.5rem;
+  height: 2px;
+  position: absolute;
+  top: -1rem;
+  transition: all 0.4s;
+}
+.hamburger::after {
+  content: "";
+  background-color: black;
+  width: 3.5rem;
+  height: 2px;
+  position: absolute;
+  top: 1rem;
+  left: 0rem;
+  transition: all 0.4s;
+}
+
+.responsive-menu-section {
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  z-index: 10;
+}
+
+.responsive-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 45%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+}
+
+.responsive-menu li {
+  display: inline;
+  padding: 1.5rem 0rem;
+}
+.responsive-menu li a {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .nav-bar {
+    visibility: visible;
+  }
+  .background {
+    display: block;
+  }
+  .hamburger {
+    display: inline;
+  }
+
+  #nav_checkbox:checked ~ .responsive-menu-section {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    height: 40vh;
+    width: 100vw;
+    background: white;
+  }
+
+  #nav_checkbox:checked + .ham__label .hamburger {
+    height: 0;
+  }
+  #nav_checkbox:checked + .ham__label .hamburger::before {
+    top: 0rem;
+    transform: rotate(135deg);
+  }
+  #nav_checkbox:checked + .ham__label .hamburger::after {
+    top: 0rem;
+    transform: rotate(-135deg);
+  }
+}
+@media only screen and (max-width: 400px) {
+  .responsive-menu li a {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 3px;
+  }
+}
 .contact-us {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 6rem 6rem 6rem 6rem;
+  margin-bottom: 10rem;
 }
 .contact-us-heading {
   display: block;
@@ -94,6 +295,13 @@ textarea {
   border-radius: 4px;
   margin-bottom: 3rem;
 }
+@media only screen and (max-width: 950px) {
+  .contact-us .contact-us-form input,
+  textarea {
+    width: 96%;
+  }
+}
+
 div.send {
   display: flex;
   align-items: center;
@@ -103,27 +311,24 @@ div.send {
   text-decoration: none;
   background-color: rgba(5, 29, 51, 1);
   width: inherit;
-  /* margin: 1rem; */
+
   padding: 1rem 14rem;
   color: white;
   border-radius: 5px;
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 10rem;
 }
-
-/* textarea {
-  background-color: rgba(196, 196, 196, 0.28);
-  border: 1px solid rgba(0, 0, 0, 0.24);
-
-} */
 .contact-details .label {
   font-size: 2.2rem;
 }
 .contact-details {
   font-size: 1.8rem;
   font-weight: 700;
-  color: grey;
+  color: rgba(0, 0, 0, 1);
+}
+.contact-details p a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
 }
 .label {
   font-size: 1.8rem;
@@ -138,20 +343,80 @@ div.send {
 .secondary-div div {
   width: 47%;
 }
+.subscribe-heading {
+  font-size: 2.2rem;
+  margin: 2rem 0;
+  font-weight: 600;
+  line-height: 2.8rem;
+}
+.contact-details input {
+  width: 27rem;
+  padding: 1rem;
+  background: rgba(239, 239, 239, 1);
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  border: radius 5px;
+}
+
+.contact-details .subscribe-btn a {
+  text-decoration: none;
+  width: 13rem;
+  background: #051d33;
+  color: white;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin-left: 2rem;
+}
+@media only screen and (max-width: 950px) {
+  .contact-us {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5vw;
+  }
+  .contact-details div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .secondary-div {
+    flex-direction: column;
+  }
+  .secondary-div div {
+    width: 100%;
+  }
+  .contact-us-form {
+    width: 90vw;
+  }
+  .contact-us .contact-us-form a {
+    padding: 1rem 8rem;
+  }
+  .contact-details {
+    margin-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .contact-details div {
+    display: block;
+  }
+}
 
 footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem;
+  padding: 1rem 3rem;
   background-color: rgba(5, 29, 51, 1);
   color: white;
+  padding-left: 11.3rem;
 }
 footer .content {
   font-size: 1.8rem;
   width: 31.3rem;
   line-height: 2.8rem;
-  /* word-spacing: 1rem; */
+  text-align: justify;
+}
+footer .content img {
+  width: 184px;
+  height: 83.86px;
 }
 footer .content hr {
   margin: 2rem 0;
@@ -162,27 +427,142 @@ footer .content hr {
 footer .quick-links {
   list-style: none;
   font-size: 2.5rem;
-  /* font-weight: 600; */
 }
-footer .quick-links li {
+footer .quick-links a {
+  text-decoration: none;
+  color: white;
+}
+footer .quick-links a li {
   margin: 1rem;
 }
-.social-media-links {
+footer .newsletter span {
+  display: block;
+  font-size: 3.5rem;
+  line-height: 4.31rem;
+  font-weight: 600;
+  width: 43.9rem;
+}
+footer .newsletter-subscribe {
   display: flex;
-
-  flex-direction: column;
+}
+footer .newsletter input {
+  width: 27.3rem;
+  color: rgba(69, 69, 69, 1);
+  font-size: 1.2rem;
+  padding: 1.5rem 3rem;
+  border-radius: 5px;
+  border: none;
+}
+footer .newsletter a.subscribe {
+  width: 13.2rem;
+  text-align: center;
+  color: rgba(5, 29, 51, 1);
+  background-color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 1.5rem 0rem;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+footer .newsletter .social-media {
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  margin-top: 3rem;
 }
-.social-media-links img {
-  height: 8.6rem;
-  border-radius: 10rem;
-  margin: 2rem;
+footer .newsletter .social-media img {
+  margin: 0 1rem;
+}
+@media only screen and (max-width: 1300px) {
+  footer {
+    padding: 1rem 3rem;
+  }
+  footer .quick-links {
+    padding: 3rem 2rem;
+  }
+
+  footer .newsletter {
+    display: block;
+  }
+
+  footer .newsletter input {
+    width: 80%;
+    margin-bottom: 3rem;
+  }
+  footer .newsletter a.subscribe {
+    margin: 0;
+    height: 14px;
+    margin-left: 1rem;
+  }
+  footer .newsletter .social-media {
+    display: block;
+    margin-top: 1rem;
+  }
+  footer .newsletter .newsletter-subscribe {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 760px) {
+  footer {
+    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 3rem;
+  }
+  footer .content {
+    width: 100%;
+  }
+  footer .content img {
+    width: 100px;
+    height: 63.86px;
+  }
+  footer .quick-links {
+    text-align: start;
+    padding: 0rem 0;
+  }
+  footer .quick-links a li {
+    margin: 0rem;
+    font-size: 2rem;
+  }
+  footer .newsletter {
+    display: block;
+  }
+  footer .newsletter span {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: -2rem;
+    text-align: start;
+    font-size: 2.5rem;
+  }
+  footer .newsletter input {
+    width: 80%;
+    display: inline-block;
+  }
+  footer .newsletter a.subscribe {
+    margin: 0;
+    height: 14px;
+    margin-left: 1rem;
+  }
+  footer .newsletter .social-media {
+    display: block;
+    margin-top: 1rem;
+  }
+  footer .newsletter .newsletter-subscribe {
+    display: flex;
+  }
 }
 .last-div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 4rem 4rem 4rem;
+  font-size: 1.8rem;
+  line-height: 3.164rem;
+  padding: 0.8rem 4rem;
+}
+@media only screen and (max-width: 760px) {
+  .last-div {
+    padding: 0.6rem;
+  }
 }
