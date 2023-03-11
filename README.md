@@ -1,1 +1,1 @@
-https://dhananjaybdeore.github.io/uipro/
+https://dhananjaybdeore.github.io/million-careers/
